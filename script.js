@@ -269,7 +269,7 @@ start_emulator.addEventListener("click", () => {
       url: "lib/emu/vgabios.bin"
     },
     hda: {
-      url: "lib/emu/win.bin",
+      url: "lib/emu/win.img",
       async: true
     },
     autostart: true,
