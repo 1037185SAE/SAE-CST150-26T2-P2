@@ -269,7 +269,7 @@ start_emulator.addEventListener("click", () => {
       url: "lib/emu/vgabios.bin"
     },
     hda: {
-      url: "lib/emu/windows95.img",
+      url: "https://github.com/1037185SAE/SAE-CST150-26T2-P2/releases/download/release/windows95.bin",
       async: true
     },
     autostart: true,
