@@ -6,6 +6,7 @@
 
   --text-colour: #ffffff;
   --text-colour-contrast: #000000;
+  --gradient-bottom: #1b3d2f;
 }
 
 :root[data-theme="dark"] {
@@ -15,6 +16,14 @@
   --palette-4: #101010;
   --text-colour: #ffffff;
   --text-colour-contrast: #ffffff;
+  --gradient-colour-top: #00000000;
+  --gradient-bottom: #101010;
+}
+
+@property --gradient-bottom {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1b3d2f;
 }
 
 @font-face {
@@ -54,6 +63,7 @@ header {
   display: flex;
   justify-content: flex-end;
   margin: 1rem;
+  z-index: 9999;
 }
 
 #back_to_top_btn {
@@ -134,7 +144,8 @@ header {
   bottom: 0;
   width: 100%;
   min-height: 20vh;
-  background: linear-gradient(rgba(0, 0, 0, 0), var(--palette-4));
+  transition: --gradient-bottom 0.3s cubic-bezier(1, 0, 0, 1);
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--gradient-bottom));
 }
 
 .content_section {
@@ -256,5 +267,9 @@ footer span a:hover {
 
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  header {
+    height: 67rem; /* HAHAHHAHAHAHAHAHHAHAHAHAHAHA SO FUNNY */
   }
 }

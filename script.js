@@ -211,7 +211,9 @@ update_colours();
 // colour scheme.
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("*").forEach(element => {
-    element.classList += " did_load";
+    if (!element.classList.contains("dont_apply_did_load")) {
+      element.classList += " did_load";
+    }
   });
 });
 
