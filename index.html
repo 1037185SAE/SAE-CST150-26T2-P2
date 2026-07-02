@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico">
+  <script src="lib/emu/libv86.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>About Me</title>
+</head>
+<body>
+  <header>
+    <canvas id="gl_canvas"></canvas>
+    <section id="ldswitch">
+      <img src="assets/sun.png" id="ldswitchpict" width="60" height="60">
+    </section>
+    <section id="main_title">
+      <h1>Hi.</h1>
+    </section>
+    <nav class="top_nav">
+      <ul>
+        <li><a href="#about" class="section_link">About</a></li>
+        <li><a href="#stuff" class="section_link">My Stuff</a></li>
+        <li><a href="#cool_stuff" class="section_link">Cool Stuff</a></li>
+        <li><a href="#game_reccomendations" class="section_link">Video Game Recommendations</a></li>
+        <li><a href="#artist_reccomendations" class="section_link">Artist Recommendations</a></li>
+        <li><a href="#qanda" class="section_link">Q&A</a></li>
+      </ul>
+    </nav>
+    <section id="fade"></section>
+  </header>
+  <section id="back_to_top">
+    <section id="back_to_top_btn">
+      <img src="assets/arrow.png" alt="back_to_top" width="40" height="40">
+    </section>
+  </section>
+  <section id="introduction" class="content_section">
+    <span class="content_section_title">
+      <h1>Introduction</h1>
+      <h2 class="content_section_subtitle">- Simple introduction to this website</h2>
+    </span>
+    <hr>
+    <h2>I am the human being known as Joel Hills.</h2>
+    <h3>In this obnoxiously modern website, I will show stuff I find cool, stuff I've made that I find cool, some recommendations of mine, and I will also answer a few questions.</h3>
+
+    <h3>Please use the navigation options at the top of this page to move to a particular section if you so desire.</h3>
+  </section>
+  <section id="about" class="content_section">
+    <span class="content_section_title">
+      <h1>About</h1>
+      <h2 class="content_section_subtitle">- Introduction to this website's creator</h2>
+    </span>
+    <hr>
+    <p>
+      <h3>
+        My name is Joel Hills, and what you're currently looking at is a website I needed to make for a Uni project. That's right. It's entirely involuntary.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        Since I needed to make this website, I thought I might as well go all out. There's not much better than sex, but getting high grades is definitely one of those things.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        At the time of writing, I am currently 18 years old. Young, (not really) energetic, and only just finding out the horrors of the modern adult life. So many responsibilities! So many things I need to keep track of! So many people who expect so much of me!
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        Before I start ranting, I'd like to give a quick introduction about me:
+      </h3>
+    </p>
+
+    <hr class="secondary_divider">
+
+    <p>
+      <h3>
+        I'm a young adult who is interested by the inner workings of everything around me. From the largest dams and skyscrapers, to the smallest CPUs in your TV remotes. I long to know how everything works, down to the fundamental level, and admittedly, sometimes at the detriment of my own sanity.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        This longing to know how things work is often paired with a critical eye looking for ways to improve said thing I'm looking at. If it can be improved, and I have the capacity and/or resources to do it, I will.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        Unfortunately I often don't have the capacity to do it, and only realize partway through. This has left me with several unfinished, unpolished projects that from the outside seem like nothing but a waste of time.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        I do however, learn from these unfinished projects, and I can take that knowledge into the next unfinished project, and slowly learn from there.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        It's an awful way to learn, especially in a workplace where you're expected (and paid) to actually finish projects.
+      </h3>
+    </p>
+
+    <p>
+      <h3>
+        Hence why I've been trying to make an effort to actually finish projects, so I can get that drive to see something through to the end, and deliver on my promises.
+      </h3>
+    </p>
+  </section>
+  <section id="stuff" class="content_section">
+    <span class="content_section_title">
+      <h1>My Stuff</h1>
+      <h2 class="content_section_subtitle">- Cool stuff I have made</h2>
+    </span>
+    <hr>
+
+    <section class="resize_img_section">
+      <h2>This website</h2>
+      <img src="assets/images/this-website.png" class="img">
+    </section>
+
+    <section class="resize_img_section">
+      <h2>This crash window</h2>
+      <img src="assets/images/panic-window.png" class="img">
+    </section>
+
+    <section class="resize_img_section">
+      <h2>This fucken thing</h2>
+      <h4>I call it The Abomination</h4>
+      <h4>Isn't it beautiful?</h4>
+      <img src="assets/images/this-fucken-thing.jpeg" class="img">
+    </section>
+  </section>
+  <section id="cool_stuff" class="content_section">
+    <span class="content_section_title">
+      <h1>Cool Stuff</h1>
+      <h2 class="content_section_subtitle">- Cool stuff people have made running in the browser</h2>
+    </span>
+    <hr>
+
+    <section>
+      <h2>X86 Emulator in your browser</h2>
+      <section class="emulator_buttons">
+        <button id="start_emulator" class="btn">Start Emulator</button>
+        <button id="reset_emulator" class="btn">Reset Emulator</button>
+      </section>
+      <section id="screen_container">
+        <canvas id="screen_container_canvas"></canvas>
+      </section>
+    </section>
+
+    <section>
+      <h2>A website in a website</h2>
+      <iframe id="embedded_website" src="#?disable_iframe=true"></iframe>
+    </section>
+  </section>
+  <section id="game_reccomendations" class="content_section">
+    <span class="content_section_title">
+      <h1>Video Game Recommendations</h1>
+      <h2 class="content_section_subtitle">- Video Games I enjoy and I think you'll enjoy too</h2>
+    </span>
+    <hr>
+      <section class="cards">
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Silksong.jpg" alt="">
+            <section class="card_title">
+              Hollow Knight: Silksong
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">It took 7 years to make - and it shows. It's HARD but very rewarding. Also it's made by Australians, so if complicit nationalism is your jam, then give this a try.</p>
+            <a href="https://www.eurogamer.net/hollow-knight-silksongs-second-patch-detailed-but-dont-expect-any-balance-tweaks" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Stray.jpg" alt="">
+            <section class="card_title">
+              Stray
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">A game by cat lovers, for cat lovers. Almost got cancelled because the cats weren't cooperating, but they eventually got them to behave. If you like cats and cyberpunk, give this a go.</p>
+            <a href="https://www.comicbasics.com/best-cyberpunk-games-for-neon-style-fans/" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Stardewvalley.jpg" alt="">
+            <section class="card_title">
+              Stardew Valley
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">A cozy farming simulator made with the sole purpose of making you envy the farmers in the countryside. Some complain that it can get quite chore-heavy, but that's because it's a simulator you fucking dumbass. It takes creative liberties where it matters to give you a more enjoyable experience.</p>
+            <a href="https://gamerant.com/stardew-valley-tips-for-completionists/" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Deltarune.jpg" alt="">
+            <section class="card_title">
+              DELTARUNE
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">"Oh DeAr It'S pIxEl ArT tHeReFoRe TeRrIbLe!" You better cut that attitude or I'll rip off your balls. This game is far more than what it's art suggests, and has a compelling story that spans it and its predecessor, Undertale. Also the music is top-tier. Even if you don't play the game, you'll definitely enjoy the soundtrack.</p>
+            <a href="https://gamerant.com/best-indie-rpgs-last-five-years/" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Celeste.jpg" alt="">
+            <section class="card_title">
+              Celeste
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">A platformer game that gained its fame for being highly tuned, and having basically no skill ceiling. The sky isn't the limit for the Celeste fanbase. It combines a low-poly, pixel art, and sketchy style that works incredibly well for what it's trying to achieve. Also the protagonist is trans, so that's always a plus.</p>
+            <a href="https://wallpapers.com/celeste" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Terraria.jpg" alt="">
+            <section class="card_title">
+              Terraria
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">A 2D sandbox with perhaps the highest "content per dollar" ratio. There is SO much content in this game, yet its price hasn't gone up over the years. With 33 bosses, and over 5,000 items, there's something for everyone here, if those someones like 2D sandbox games. Which isn't everyone. Where am I going with this?</p>
+            <a href="https://www.thegamer.com/terraria-worth-it/" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Beamngdrive.jpg" alt="">
+            <section class="card_title">
+              BeamNG.Drive
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">A world-class 3D softbody physics engine that just so happens to also be a video game. It can realistically simulate the complex effects of not paying attention while cruising on the M1 and smashing your favourite AU Falcon.</p>
+            <a href="https://www.worldofmods.com/beamng/" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Baldursgate3.jpg" alt="">
+            <section class="card_title">
+              Baldur's Gate 3
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">The only AAA game in the last 15 years made by a studio who actually gives a fuck. This game is the perfect mixture of fun mechanics, beautiful graphics, quick wit, and a sprinkling of fleeting horniness. This game is also massive, and well worth the upfront cost, especially after mod support upped its replayability tenfold.</p>
+            <a href="https://store.playstation.com/en-ca/concept/10007460" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+        <section class="card">
+          <section class="card_img">
+            <img src="assets/vg_card_images/Slaythespire2.jpg" alt="">
+            <section class="card_title">
+              Slay the spire 2
+            </section>
+          </section>
+          <section class="card_description_section">
+            <p class="card_description">Basically a board game as a video game, although the video game part came first. This game pioneered the "deck building rougelite" genre that is still popular to this day. It's also one of those games that doesn't require a beefy computer to play, and is even playable at framerates that other games stop being playable at, as it doesn't require quick reflexes, just your brains.</p>
+            <a href="https://primagames.com/tips/slay-the-spire-2-save-file-location-on-pc" class="card_image_attribution">Image Attribution</a>
+          </section>
+        </section>
+
+      </section>
+  </section>
+  <section id="artist_reccomendations" class="content_section">
+    <span class="content_section_title">
+      <h1>Artist Recommendations</h1>
+      <h2 class="content_section_subtitle">- Can you tell I'm a bit of a metalhead?</h2>
+    </span>
+    <hr>
+    <section class="cards">
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Sleeptoken.jpg">
+          <section class="card_title">
+            Sleep Token
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">A british band who choose to keep their identities hidden so their music hits harder. Absolutely refuses to pick a genre stick with it, yet the genres they choose mix so well. Anthony Fantano hates them, but since when did his opinion matter?</p>
+          <a href="https://staging.rocksound.tv/news/sleep-token-announce-new-album-even-in-arcadia" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Spiritbox.jpg">
+          <section class="card_title">
+            Spiritbox
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">A canadian band who are way nicer than they look, I'm sure. Their lead singer has a beautiful voice, but doesn't always elect to use it, instead, screaming her lungs to shreds with an impressive vocal range.</p>
+          <a href="https://www.kerrang.com/spiritbox-are-the-hottest-band-in-the-world-believe-the-hype" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Abba.jpg">
+          <section class="card_title">
+            ABBA
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">Haha you thought it was just going to be metal bands? I'm more unique than that, I swear. A classic band hailing from the 80s, and still going strong, although their vocals have degraded with age. Aren't I supposed to be saying what's good about these bands?</p>
+          <a href="=https://www.thecurrent.org/feature/2018/07/16/abba-a-swedish-perspective" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Clowncore.jpg">
+          <section class="card_title">
+            Clowncore
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">No comment.</p>
+          <a href="https://www.metal-hammer.de/clown-core-neuer-song-truth-and-life-1044609/" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Devintownsend.jpg">
+          <section class="card_title">
+            Devin Townsend
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">A white man who looks like a white supremacist, but really isn't. His scream could rip you to shreds, and with his Devin Townsend Project band, varies his music by collaborating with different musicians for a different feeling album each time.</p>
+          <a href="https://rockcelebrities.net/devin-townsend-explains-how-musical-expression-supports-his-mental-health/" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Hanszimmer.jpg">
+          <section class="card_title">
+            Hans Zimmer
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">The master of making music feel like something unique and out of this world, Hans' music is the base that a great movie or video game is built off of. I like to call him the "Modern John Williams", as I see their music as fundamentally related, and John Williams is old anyway, so someone needs to continue his legacy.</p>
+          <a href="https://collider.com/hans-zimmer-live-album-streaming-release/" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Johnwilliams.jpg">
+          <section class="card_title">
+            John Williams
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">Would you look at that? Here he is. The man himself. The architect of some of the most recognizable soundtracks to date, and master of the conductor's stick. He's old, but still very much capable of making bangers to this day, as while the Star Wars Sequels may have been shit, their soundtracks were far more memorable than the actual movies themselves.</p>
+          <a href="https://facts.net/celebrity/20-mind-blowing-facts-about-john-williams/" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Enniomorricone.jpg">
+          <section class="card_title">
+            Ennio Morricone
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">The rich bastard who's dead now. Despite his death, his music is still popular to this day, with his soundtracks for movies like "The Good, The Bad, And The Ugly" still popular to this day and forever associated with The Wild West.</p>
+          <a href="https://www.thecurrent.org/feature/2020/07/06/ennio-morricone-dies-91" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+      <section class="card">
+        <section class="card_img">
+          <img src="assets/a_card_images/Tobyfox.jpg">
+          <section class="card_title">
+            Toby Fox
+          </section>
+        </section>
+        <section class="card_description_section">
+          <p class="card_description">The absolute goober who looks different in every photo and video that's taken of him. After having the fever dream in 2011-2012 that made his career, he's been given an avenue for his music to be shared via the video games Undertale and Deltarune, discussed above. He can tell an entire story with just a single song, with every little detail being a deliberate thing to build up a story via sound.</p>
+          <a href="https://www.levelup.com/noticias/699227/El-creador-de-Undertale-reemplazara-a-Sakurai-en-las-columnas-de-Famitsu" class="card_image_attribution">Image Attribution</a>
+        </section>
+      </section>
+
+    </section>
+  </section>
+  <section id="qanda" class="content_section">
+    <span class="content_section_title">
+      <h1>Q&A</h1>
+      <h2 class="content_section_subtitle">- Questions and answers</h2>
+    </span>
+    <hr>
+    <!-- todo -->
+  </section>
+  <footer class="content_section">
+    <span>
+      <h5>(slightly modified) Background shader effect created by Silexars on ShaderToy</h5>
+      <a href="https://www.shadertoy.com/view/XsXXDn">https://www.shadertoy.com/view/XsXXDn</a>
+    </span>
+    <span>
+      <h5>Sun lighting mode icon made by Good Ware on Flaticon</h5>
+        <a href="https://www.flaticon.com/free-icons/sun">https://www.flaticon.com/free-icons/sun</a>
+    </span>
+    <span>
+      <h5>Moon lighting mode icon made by Good Ware on Flaticon</h5>
+      <a href="https://www.flaticon.com/free-icons/moon">https://www.flaticon.com/free-icons/moon</a>
+    </span>
+    <span>
+      <h5>Arrow Icon made by Roundicons on Flaticon</h5>
+      <a href="https://www.flaticon.com/free-icons/next">https://www.flaticon.com/free-icons/next</a>
+    </span>
+    <span>
+    <span>
+      <h5>Browser x86 emulator on GitHub</h5>
+      <a href="https://github.com/copy/v86.git">https://github.com/copy/v86.git</a>
+    </span>
+      <h5>Any and all trademarked items or content mentioned are owned by their respective copyright holders, who reserve all rights.</h5>
+    </span>
+  </footer>
+</body>
+</html>
